@@ -211,6 +211,10 @@ header {
     text-align: center;
 }
 
+.features-card img {
+    width: 60px;
+}
+
 /* big features section */
 
 .big-feature-section {
@@ -280,3 +284,30 @@ header {
 
 /* footer */
 
+footer {
+    padding: 80px;
+    background-color: #ebf2fa;
+}
+
+.link-column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-container {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* sub footer */
+
+.subfooter {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.subfooter-container {
+    justify-content: center;
+    gap: 30px;
+}
