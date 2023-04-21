@@ -27,6 +27,10 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
@@ -79,6 +83,7 @@ ul {
     padding: 10px 20px;
     box-shadow: 0 0 2px var(--secondary-text-color);
     transition: 0.2s ease-out;
+    text-align: center;
 }
 
 .primary-button:hover {
@@ -118,6 +123,7 @@ ul {
 .main-nav {
     margin-top: 20px;
     justify-content: space-between;
+    position: relative;
 }
 
 .company-logo img {
@@ -161,7 +167,7 @@ header {
 }
 
 .header-right img {
-    width: 600px;
+    width: 100%;
 }
 
 /* companies section */
@@ -173,8 +179,9 @@ header {
 }
 
 .logos {
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo {
@@ -192,6 +199,7 @@ header {
 
 .features-header {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .features-header .features-heading-text {
@@ -201,7 +209,7 @@ header {
 .features-area {
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -226,6 +234,10 @@ header {
     gap: 30px;
 }
 
+#second-big-feature {
+    flex-direction: row-reverse;
+}
+
 .feature-img img {
     width: 100%;
 }
@@ -236,6 +248,10 @@ header {
 }
 
 /* examples section */
+
+.examples-section {
+    padding: 80px var(--padding-inline-section);
+}
 
 .examples-header {
     text-align: center;
@@ -277,6 +293,7 @@ header {
     flex-direction: column;
     gap: 30px;
     color: white;
+    text-align: center;
 }
 
 .cta-section-container p {
@@ -312,14 +329,24 @@ footer {
 .subfooter-container {
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 /* Media Queries */
 
 @media screen and (max-width: 991px) {
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
     .nav-toggle {
         display: block;
         margin-right: 20px;
+    }
+
+    .main-nav {
+        overflow: initial;
     }
 
     .nav-links {
@@ -333,5 +360,74 @@ footer {
     .examples-card {
         width: calc(50% - 10px);
         height: 180px;
+    }
+
+    .cta-section {
+        padding-block: 80px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .primary-button {
+        width: 100%;
+    }
+    
+    .header-section {
+        flex-direction: column-reverse;
+    }
+    
+    .header-left {
+        max-width: 100vw;
+        text-align: center;
+    }
+
+    .features-card {
+        min-width: calc(50% - 10px);
+    }
+
+    .big-feature-container, #second-big-feature {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .link-column {
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    :root {
+        --padding-inline-section: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .features-card {
+        min-width: 100%;
+    }
+
+    .examples-card {
+        width: 100%;
     }
 }
